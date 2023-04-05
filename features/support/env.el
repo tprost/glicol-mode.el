@@ -6,8 +6,8 @@
 (add-to-list 'load-path glicol-mode-root-path)
 ;; (require 'f)
 
-;; (defvar glicol-mode-test-path
-;;   (f-dirname (f-this-file)))
+(defvar glicol-mode-test-path
+  (f-dirname (f-this-file)))
 
 ;; (defvar glicol-mode-root-path
 ;;   (f-parent glicol-mode-test-path))
@@ -31,6 +31,7 @@
   (get-buffer-create "*glicol-mode-tests*"))
  (erase-buffer)
  (transient-mark-mode 1)
+ 
  (cua-mode 0)
  (setq set-mark-default-inactive nil)
  (deactivate-mark))

@@ -18,12 +18,12 @@
 (defvar glicol-font-lock-keywords
   (let* (;; Define regex patterns for each element
          (x-keywords-regexp ">>")
-         (x-constants-regexp "\\b\\(_?[a-zA-Z0-9]+\\)")
-         (x-functions-regexp "~\\(?:[a-zA-Z]+\\)"))
+         ;; (x-constants-regexp "\\b\\(_?[a-zA-Z0-9]+\\)")
+         (sdasda-regexp "~[[:alpha:]]+"))
 
     `((,x-keywords-regexp . font-lock-keyword-face)
-      (,x-constants-regexp . font-lock-constant-face)
-      (,x-functions-regexp . font-lock-function-name-face))))
+      (,"~[[:alpha:]]+" . font-lock-variable-name-face))))
+      ;;(,x-constants-regexp . font-lock-constant-face))))
 
 (define-derived-mode glicol-mode prog-mode "Glicol"
   "Major mode for editing Glicol music language files."

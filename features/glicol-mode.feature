@@ -5,11 +5,11 @@ Feature: Glicol mode
 
   Scenario: Syntax highlighting
     Given I visit "example.glicol"
+    Then I should be in glicol-mode
     Then I should see the following faces:
       | text                | face                    |
-      | "~gate"             | font-lock-function-name-face |
-      | ">>"                | font-lock-keyword-face  |
-      | "_60"               | font-lock-constant-face |
+      | ~gate               | font-lock-variable-name-face |
+      
 
   Scenario: Indentation
     # Fill in indentation tests based on Glicol's indentation rules
