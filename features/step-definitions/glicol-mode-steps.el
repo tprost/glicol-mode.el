@@ -2,11 +2,6 @@
        (lambda ()
          (setq set-mark-default-inactive t)))
 
-
-;; (When "^I visit \"\\([^\"]+\\)\"$"
-;;   (lambda (filename)
-;;     (find-file (f-join glicol-mode-test-path "fixtures" filename))))
-
 (When "^I visit \"\\([^\"]+\\)\"$"
   (lambda (filename)
     (find-file (expand-file-name (concat "fixtures/" filename) glicol-mode-test-path))
