@@ -25,12 +25,14 @@
       (,"~[[:alpha:]]+" . font-lock-variable-name-face))))
       ;;(,x-constants-regexp . font-lock-constant-face))))
 
+;;;###autoload
 (define-derived-mode glicol-mode prog-mode "Glicol"
   "Major mode for editing Glicol music language files."
 
   ;; Code for syntax highlighting
   (setq font-lock-defaults '((glicol-font-lock-keywords))))
 
+;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.glicol\\'" . glicol-mode))
 
 (provide 'glicol-mode)
